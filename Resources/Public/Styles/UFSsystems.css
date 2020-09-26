@@ -9,13 +9,13 @@ Created By:
 
 :root {
     --backgroundColor: #f9e8e7;
-    --lightBackgroundColor: #1F2D45;
+    --lightBackgroundColor: #ffeeed;
     --accentColor: #e68376;
     --accentAltColor: #ea9b95;
     --tintColor: #f3bc34;
     --themeColor: #f3c9b5;
     --lightTextColor: var(--backgroundColor);
-    --darkTextColor: var(--themeColor)
+    --darkTextColor: #101010;
 }
 
 /* -------------------------- Colour Applicators */
