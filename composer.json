@@ -17,7 +17,7 @@
     },
     "extra": {
         "neos": {
-            "package-key": "Systems.Base"
+            "package-key": "Engineers.Site"
         },
         "applied-flow-migrations": [
             "TYPO3.FLOW3-201201261636",
