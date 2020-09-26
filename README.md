@@ -1,5 +1,5 @@
 # Engineers.Site
-Codebrew Hackathon Engineers Within Borders Website. 
+CISSA / Codebrew Hackathon Engineers Within Borders Website. 
 
 Created by Maciej Necki. 
 
