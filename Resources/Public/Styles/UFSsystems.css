@@ -8,12 +8,12 @@ Created By:
 /* -------------------------- Colour Definitions */
 
 :root {
-    --backgroundColor: #f8f9fc;
+    --backgroundColor: #f9e8e7;
     --lightBackgroundColor: #1F2D45;
-    --accentColor: #f1f6ff;
-    --accentAltColor: #ced8e5;
-    --tintColor: #004de6;
-    --themeColor: #141f33;
+    --accentColor: #e68376;
+    --accentAltColor: #ea9b95;
+    --tintColor: #f3bc34;
+    --themeColor: #f3c9b5;
     --lightTextColor: var(--backgroundColor);
     --darkTextColor: var(--themeColor)
 }
