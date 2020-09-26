@@ -7,7 +7,7 @@
         <a href="/">
             <div class="logo">
                 <!--<img class="logo" src="{neos.media:uri.image(image: content.logo)}">-->
-                <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Systems.Base')}">-->
+                <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Engineers.Site')}">-->
                 {content.header -> f:format.raw()}
             </div>
         </a>
@@ -21,7 +21,7 @@
         <a class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
 
         <!--Overlay top content area-->
-        <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Systems.Base')}">-->
+        <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Engineers.Site')}">-->
         <div class="highBar">
             <h2>Menu</h2>
         </div>
@@ -33,11 +33,11 @@
 
         <!--Overlay Bottom Content Area-->
         <div class="lowBar">
-            <h2>MYX Systems</h2>
+            <h2></h2>
         </div>
     </div>
 
     <!-- Element to open/show the overlay navigation menu -->
-    <span class="sky-launcher" onclick="openNav()"><img class="space_rocket" src="{f:uri.resource(path:'Icons/space_rocket.svg', package:'Systems.Base')}"></span>
+    <span class="sky-launcher" onclick="openNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
     <!-- End Sky Launch Nav -->
 </nav>

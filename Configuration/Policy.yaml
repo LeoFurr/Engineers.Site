@@ -1,25 +1,25 @@
-privilegeTargets:
-
-  'Neos\ContentRepository\Security\Authorization\Privilege\Node\ReadNodePrivilege':
-
-    'Engineers.Site:MembersArea':
-      # Replace <NodeIdentifier> with the node's identifier to be targeted (you can see the identifier in the "Additional info" group in the Property Inspector of the Neos Backend)
-      matcher: 'isDescendantNodeOf("6554cb65-2650-4dad-9cef-8fa6553fc0fe")'
-
-
-roles:
-
-  'Flowpack.Neos.FrontendLogin:User':
-    privileges:
-      -
-        # Grant "frontend users" access to the "Member area"
-        privilegeTarget: 'Engineers.Site:MembersArea'
-        permission: GRANT
-
-
-  'Neos.Neos:Editor':
-    privileges:
-      -
-        # Grant "backend users" to access the "Member area" - Otherwise those pages would be hidden in the backend, too!
-        privilegeTarget: 'Engineers.Site:MembersArea'
-        permission: GRANT
+#privilegeTargets:
+#
+#  'Neos\ContentRepository\Security\Authorization\Privilege\Node\ReadNodePrivilege':
+#
+#    'Engineers.Site:MembersArea':
+#      # Replace <NodeIdentifier> with the node's identifier to be targeted (you can see the identifier in the "Additional info" group in the Property Inspector of the Neos Backend)
+#      matcher: 'isDescendantNodeOf("6554cb65-2650-4dad-9cef-8fa6553fc0fe")'
+#
+#
+#roles:
+#
+#  'Flowpack.Neos.FrontendLogin:User':
+#    privileges:
+#      -
+#        # Grant "frontend users" access to the "Member area"
+#        privilegeTarget: 'Engineers.Site:MembersArea'
+#        permission: GRANT
+#
+#
+#  'Neos.Neos:Editor':
+#    privileges:
+#      -
+#        # Grant "backend users" to access the "Member area" - Otherwise those pages would be hidden in the backend, too!
+#        privilegeTarget: 'Engineers.Site:MembersArea'
+#        permission: GRANT

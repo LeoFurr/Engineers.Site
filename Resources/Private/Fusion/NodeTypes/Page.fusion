@@ -11,15 +11,15 @@ prototype(Engineers.Site:Page) < prototype(Engineers.Site:DefaultPage) {
                 nodePath = 'main'
             }
 
-            header = Neos.Neos:ContentCollection {
-                nodePath = ${q(site).find('header').property('_path')}
-                collection = ${q(site).find('Navigation').children()}
-            }
-
-            footer = Neos.Neos:ContentCollection {
-                nodePath = ${q(site).find('footer').property('_path')}
-                collection = ${q(site).find('Footer').children()}
-            }
+//            header = Neos.Neos:ContentCollection {
+//                nodePath = ${q(site).find('header').property('_path')}
+//                collection = ${q(site).find('Navigation').children()}
+//            }
+//
+//            footer = Neos.Neos:ContentCollection {
+//                nodePath = ${q(site).find('footer').property('_path')}
+//                collection = ${q(site).find('Footer').children()}
+//            }
 
             breadcrumbs = Neos.Neos:BreadcrumbMenu {
             }
