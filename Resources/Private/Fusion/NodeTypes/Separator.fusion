@@ -1,0 +1,5 @@
+prototype(Engineers.Site:Separator) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Engineers.Site/Private/Templates/NodeTypes/Separator.html'
+
+    design = ${q(node).property('design')}
+}

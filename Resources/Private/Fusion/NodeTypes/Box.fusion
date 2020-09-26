@@ -1,0 +1,16 @@
+prototype(Engineers.Site:Box) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Engineers.Site/Private/Templates/NodeTypes/Box.html'
+    columnContent = Neos.Neos:ContentCollection
+    columnContent {
+        nodePath = 'column0'
+    }
+    centering = ${q(node).property('centering')}
+    color = ${q(node).property('color')}
+    design = ${q(node).property('design')}
+    boxType = ${q(node).property('boxType')}
+    backgroundImage = ${q(node).property('backgroundImage')}
+    backgroundSize = ${q(node).property('backgroundSize')}
+    backgroundPosition = ${q(node).property('backgroundPosition')}
+    artificialHeight = ${q(node).property('artificialHeight')}
+    applyHeight = ${q(node).property('applyHeight')}
+}

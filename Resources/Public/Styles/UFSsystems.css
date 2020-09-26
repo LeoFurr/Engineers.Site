@@ -1,0 +1,362 @@
+/* --------------------------
+About:
+    Base stylesheet for engineers pages under UFS principles.
+Created By:
+    Maciej Necki, @maciejnecki
+-------------------------- */
+
+/* -------------------------- Colour Definitions */
+
+:root {
+    --backgroundColor: #f8f9fc;
+    --lightBackgroundColor: #1F2D45;
+    --accentColor: #f1f6ff;
+    --accentAltColor: #ced8e5;
+    --tintColor: #004de6;
+    --themeColor: #141f33;
+    --lightTextColor: var(--backgroundColor);
+    --darkTextColor: var(--themeColor)
+}
+
+/* -------------------------- Colour Applicators */
+
+.backgroundColor {
+    background: var(--backgroundColor);
+    color: var(--darkTextColor);
+    border-color: var(--backgroundColor);
+}
+
+.accentColor {
+    background: var(--accentColor);
+    color: var(--darkTextColor);
+    border-color: var(--accentColor);
+}
+
+.accentAltColor {
+    background: var(--accentAltColor);
+    color: var(--darkTextColor);
+    border-color: var(--accentAltColor);
+}
+
+.tintColor {
+    background: var(--tintColor);
+    color: var(--lightTextColor);
+    border-color: var(--tintColor);
+}
+
+.themeColor {
+    background: var(--themeColor);
+    color: var(--lightTextColor);
+    border-color: var(--themeColor);
+}
+
+.textBackgroundColor {
+    color: var(--backgroundColor);
+}
+
+.textAccentColor {
+    color: var(--accentColor);
+}
+
+.textAccentAltColor {
+    color: var(--accentAltColor);
+}
+
+.textTintColor {
+    color: var(--tintColor);
+}
+
+.textThemeColor {
+    color: var(--themeColor);
+}
+
+/* -------------------------- File Scope */
+
+html {
+    margin: 0 auto;
+    overflow-x: none;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 130px;
+
+    background-color: var(--backgroundColor);
+    color: var(--darkTextColor);
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7em;
+    word-wrap: break-word;
+
+    -webkit-text-size-adjust: none;
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    transition:.3s;
+
+    /*For footer allignment, substracted number must be footer height.*/
+    min-height: calc(100vh + 50px);
+}
+
+/* -------------------------- General Applicators */
+
+/* Makes content element look disabled. */
+.disabled {
+    background: var(--backgroundColor);
+    border: solid 2px var(--accentAltColor);
+    color:  var(--accentAltColor);
+    pointer-events: none;
+    user-select: none;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/* -------------------------- Buttons */
+
+button, .btn {
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+
+    height: 37px;
+    padding: 7px;
+    border-radius: 3px 3px 14px 3px;
+    border: solid 2px var(--themeColor);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    max-width: 200px;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+button:hover, .btn:hover {
+    border: solid 2px var(--tintColor);
+    filter: saturate(150%);
+}
+
+button:active, .btn:active {
+    background: var(--tintColor);
+    border: solid 2px var(--themeColor);
+    color: var(--lightTextColor);
+}
+
+button.altButtonDesign {
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+
+    height: 37px;
+    padding: 7px;
+    border-radius: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button.altButtonDesign:hover {
+    filter: saturate(75%);
+}
+
+button.altButtonDesign:active {
+    background: var(--tintColor);
+    border: solid 2px var(--themeColor);
+    color: var(--lightTextColor);
+}
+
+/* -------------------------- Inputs */
+
+input, textarea {
+    font-size: 17px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid 1px var(--themeColor);
+    border-width: 1px 1px 1px 4px;
+    background: var(--backgroundColor);
+    color: var(--darkTextColor);
+}
+
+input:active, textarea:active, input:focus, textarea:focus {
+    border: solid 1px var(--tintColor);
+    border-width: 1px 1px 1px 4px;
+    background: var(--backgroundColor);
+    color: var(--darkTextColor);
+}
+
+/* -------------------------- Separators */
+
+hr {
+    border: 1px solid var(--themeColor);
+    width: 80%;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+hr.altSeparatorDesign {
+    border: 1px solid var(--themeColor);
+    width: 100%;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+/* --------------------------  Boxes */
+
+div.box {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 16px;
+    max-width: 80%;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+div.boxFullWidth {
+    border: none;
+    padding: 21px;
+}
+
+div.altBoxDesign {
+    border: solid 1px var(--themeColor);
+    border-width: 4px 0 0 0;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* -------------------------- Typography */
+
+pre {
+    padding: 7px;
+    margin: 0 auto;
+    overflow: auto;
+    border: 1px solid var(--themeColor);
+    background-color: var(--backgroundColor);
+    margin-bottom: 21px;
+}
+
+code {
+    font-family: Consolas, monospace, Monaco;
+    border: 1px solid var(--themeColor);
+    padding: 7px;
+    background-color: var(--backgroundColor);
+    margin-bottom: 21px;
+}
+
+h1 {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.7em;
+}
+
+h2 {
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 28.8px;
+    line-height: 1.7em;
+}
+
+h3 {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.7em;
+}
+
+h4 {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18.4px;
+    line-height: 1.7em;
+}
+
+h5 {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.7em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--tintColor);
+    cursor: pointer;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a[target=_blank] {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.7;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+/* -------------------------- Lists */
+
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+/* -------------------------- Design Elements */
+
+div {
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+.paddedContent {
+    padding: 16px;
+}
+
+/* -------------------------- Images */
+
+img {
+    width: 100%;
+    max-width: 800px;
+}

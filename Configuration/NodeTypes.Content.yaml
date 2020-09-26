@@ -1,0 +1,374 @@
+# Styled Button
+##############################
+'Engineers.Site:Button':
+    superTypes:
+      'Neos.Neos:Content': TRUE
+    ui:
+      reloadIfChanged: FALSE
+      inspector:
+        groups:
+          advanced:
+            label: 'Options'
+            icon: 'icon-info-circle'
+            position: 1
+      label: 'Button'
+      icon: 'icon-hockey-puck'
+      group: 'general'
+      position: 1
+    properties:
+      design:
+        type: string
+        defaultValue: ''
+        ui:
+          label: 'Design'
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'advanced'
+            editor: Content/Inspector/Editors/SelectBoxEditor
+            editorOptions:
+              placeholder: 'Regular'
+              values:
+                '':
+                  label: 'Regular'
+                altButtonDesign:
+                  label: 'Alternate'
+      color:
+        type: string
+        defaultValue: 'themeColor'
+        ui:
+          label: 'Background Color'
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'advanced'
+            editor: Content/Inspector/Editors/SelectBoxEditor
+            editorOptions:
+              placeholder: 'Default'
+              values:
+                backgroundColor:
+                  label: 'Background'
+                themeColor:
+                  label: 'Theme'
+                tintColor:
+                  label: 'Tint'
+                accentColor:
+                  label: 'Accent'
+                accentAltColor:
+                  label: 'Accent Alt'
+      title:
+        type: string
+        ui:
+          label: 'Title'
+          reloadIfChanged: TRUE
+          inlineEditable: FALSE
+          inspector:
+            group: 'advanced'
+            editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+            editorOptions:
+              placeholder: 'Enter Title...'
+      url:
+        type: string
+        ui:
+          label: 'Button Link'
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'advanced'
+            editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+            editorOptions:
+              assets: FALSE
+      target:
+        type: boolean
+        defaultValue: FALSE
+        ui:
+          label: 'Open link in a new card?'
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'advanced'
+      disable:
+        type: boolean
+        defaultValue: FALSE
+        ui:
+          label: 'Make it disabled?'
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'advanced'
+
+# Styled Separator
+##############################
+'Engineers.Site:Separator':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    inspector:
+      groups:
+        advanced:
+          label: 'Options'
+          icon: 'icon-info-circle'
+          position: 1
+    label: 'Separator'
+    icon: 'icon-grip-lines'
+    group: 'general'
+    position: 2
+  properties:
+    design:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Design'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Regular'
+            values:
+              '':
+                label: 'Regular'
+              altSeparatorDesign:
+                label: 'Alternate'
+
+# Container Box for content
+##############################
+'Engineers.Site:Box':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: structure
+    label: 'Box'
+    icon: icon-square
+    inlineEditable: true
+    position: 1
+    inspector:
+      groups:
+        advanced:
+          label: 'Options'
+          icon: 'icon-info-circle'
+          position: 1
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Name'
+        reloadIfChanged: TRUE
+        inlineEditable: FALSE
+        inspector:
+          group: 'advanced'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+          editorOptions:
+            placeholder: 'Box Name'
+    boxType:
+      type: string
+      defaultValue: 'box'
+      ui:
+        label: 'Type'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Regular'
+            values:
+              box:
+                label: 'Regular'
+              boxFullWidth:
+                label: 'Full Width'
+    design:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Design'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Regular'
+            values:
+              '':
+                label: 'Regular'
+              altBoxDesign:
+                label: 'Alternate'
+    centering:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Content Alignment'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              '':
+                label: 'Default'
+              left:
+                label: 'Left'
+              center:
+                label: 'Center'
+              right:
+                label: 'Right'
+    color:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Background Colour'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              backgroundColor:
+                label: 'Background'
+              themeColor:
+                label: 'Theme'
+              tintColor:
+                label: 'Tint'
+              accentColor:
+                label: 'Accent'
+              accentAltColor:
+                label: 'Accent Alt'
+    applyHeight:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Assign artificial height?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+    artificialHeight:
+      type: string
+      ui:
+        label: 'Artificial Height'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+          editorOptions:
+            placeholder: 'eg. 120px'
+    backgroundImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Background Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editorOptions:
+            features:
+              crop: true
+              resize: false
+    backgroundSize:
+      type: string
+      ui:
+        label: 'Adjust background image size'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+          editorOptions:
+            placeholder: 'eg. 200px'
+    backgroundPosition:
+      type: string
+      ui:
+        label: 'Adjust background image position'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+          editorOptions:
+            placeholder: 'eg. center center'
+  childNodes:
+    column0:
+      type: 'Neos.Neos:ContentCollection'
+
+# One Column Content
+##############################
+'Engineers.Site:PaddedContent':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: structure
+    label: 'Padded content'
+    icon: icon-columns
+    inlineEditable: true
+    position: 3
+    inspector:
+      groups:
+        advanced:
+          label: 'Options'
+          icon: 'icon-info-circle'
+          position: 1
+  properties:
+    centering:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Content Alignment'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              '':
+                label: 'Default'
+              left:
+                label: 'Left'
+              center:
+                label: 'Center'
+              right:
+                label: 'Right'
+  childNodes:
+    column0:
+      type: 'Neos.Neos:ContentCollection'
+
+# Coloured Text
+##############################
+'Engineers.Site:ColoredText':
+  constraints:
+    nodeTypes:
+      '*': false
+      'Neos.NodeTypes:Text': true
+      'Neos.NodeTypes:Headline': true
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: structure
+    label: 'Colored text'
+    icon: icon-file-alt
+    inlineEditable: true
+    position: 2
+    inspector:
+      groups:
+        advanced:
+          label: 'Options'
+          icon: 'icon-info-circle'
+          position: 1
+  properties:
+    color:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Text Colour'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'advanced'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              textBackgroundColor:
+                label: 'Background'
+              textThemeColor:
+                label: 'Theme'
+              textTintColor:
+                label: 'Tint'
+              textAccentColor:
+                label: 'Accent'
+              textAccentAltColor:
+                label: 'Accent Alt'
+  childNodes:
+    column0:
+      type: 'Neos.Neos:ContentCollection'

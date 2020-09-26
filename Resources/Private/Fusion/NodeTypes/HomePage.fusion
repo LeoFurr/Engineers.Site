@@ -1,0 +1,15 @@
+// Fusion defining additional conent areas of HomePage NodeType.
+
+prototype(Engineers.Site:HomePage) < prototype(Engineers.Site:Page) {
+    body {
+        content {
+            header = Neos.Neos:ContentCollection {
+                nodePath = 'header'
+            }
+
+            footer = Neos.Neos:ContentCollection {
+                nodePath = 'footer'
+            }
+        }
+    }
+}

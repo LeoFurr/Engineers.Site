@@ -1,0 +1,8 @@
+prototype(Engineers.Site:PaddedContent) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Engineers.Site/Private/Templates/NodeTypes/PaddedContent.html'
+    columnContent = Neos.Neos:ContentCollection
+    columnContent {
+        nodePath = 'column0'
+    }
+    centering = ${q(node).property('centering')}
+}

@@ -1,0 +1,27 @@
+Neos:
+  Flow:
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              variables:
+                path: '404'
+    mvc:
+      routes:
+        Engineers.Site: true
+        'Neos.Neos':
+          variables:
+            # Remove .html from sites
+            'defaultUriSuffix': ''
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Engineers.Site/Private/Form/'
+  SwiftMailer:
+    transport:
+      type: 'Swift_SmtpTransport'
+      options:
+        host: 'serwer1328882.home.pl'
+        port: 587
+        username: 'noreply@myx.systems'
+        password: ''

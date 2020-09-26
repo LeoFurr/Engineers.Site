@@ -1,0 +1,43 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+
+<nav class="menu">
+    <!--Header Logo Area-->
+    <div class="brand">
+        <a href="/">
+            <div class="logo">
+                <!--<img class="logo" src="{neos.media:uri.image(image: content.logo)}">-->
+                <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Systems.Base')}">-->
+                {content.header -> f:format.raw()}
+            </div>
+        </a>
+        <br>
+    </div>
+    <!--End Header Logo Area-->
+
+    <!-- Sky Launch Nav -->
+    <div id="skyLaunchNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+        <!--Overlay top content area-->
+        <!--<img class="logo" src="{f:uri.resource(path:'Icons/logo.svg', package:'Systems.Base')}">-->
+        <div class="highBar">
+            <h2>Menu</h2>
+        </div>
+
+        <!-- Overlay navigation content -->
+        <div class="overlay-content">
+            {parts.menu -> f:format.raw()}
+        </div>
+
+        <!--Overlay Bottom Content Area-->
+        <div class="lowBar">
+            <h2>MYX Systems</h2>
+        </div>
+    </div>
+
+    <!-- Element to open/show the overlay navigation menu -->
+    <span class="sky-launcher" onclick="openNav()"><img class="space_rocket" src="{f:uri.resource(path:'Icons/space_rocket.svg', package:'Systems.Base')}"></span>
+    <!-- End Sky Launch Nav -->
+</nav>

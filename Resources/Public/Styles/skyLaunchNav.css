@@ -1,0 +1,219 @@
+/* --------------------------
+About:
+    Base stylesheet for the SkuLaunch menu.
+Created By:
+    Maciej Necki, @maciejnecki
+-------------------------- */
+
+
+/* -------------------------- Overlay Areas */
+
+/* Background */
+.overlay {
+    height: 100%;
+    width: 0;
+    max-width: 330px;
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    bottom: 0;
+    background-color: var(--themeColor);
+    /* -webkit-backdrop-filter: blur(20px); */
+    /* backdrop-filter: blur(20px); */
+    overflow-y: hidden; /* Disable vertical scroll */
+    transition: 0.7s;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    margin: auto;
+    top: 50px;
+    width: 90%;
+    /*height: 80%;*/
+    padding: 6px;
+    text-align: left;
+    /*margin-top: 30px;*/ /* 30px top margin to avoid conflict with the close button on smaller screens */
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background: var(--lightBackgroundColor);
+    border-radius: 7px;
+}
+
+.overlay-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+div.overlay-content > ul {
+    padding-left: 0;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 0;
+}
+
+.overlay-content > ul > li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+img.logo {
+    padding-bottom: 21px;
+}
+
+
+/* -------------------------- Navigation Links Top Level */
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 1px;
+    /*padding-left: 5px;*/
+    /*padding-right: 5px;*/
+    /*margin-bottom: 2px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    text-decoration: none;
+    font-family:'avenir_lt_45_bookregular', Arial, Helvetica, sans-serif;
+    font-weight:200;
+    font-size: 17px;
+    color: var(--lightTextColor);
+    display: block; /* Display block instead of inline */
+    /*border-radius: 3px 3px 11px 3px;*/
+    transition: 0.3s; /* Transition effects on hover (color) */
+    text-align: left;
+}
+
+.overlay ul li:hover > a, .overlay a:focus {
+    color: var(--tintColor);
+    text-decoration: none;
+    /*background: var(--accentColor);*/
+}
+
+/* -------------------------- Sub Menu */
+
+.overlay ul li ul li > a {
+    min-width: 100%;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: var(--tintColor);
+    margin-bottom: 5px;
+    border-radius: 3px 3px 11px 3px;
+}
+
+.overlay ul li ul li:hover > a {
+    background: var(--accentAltColor);
+}
+
+.overlay ul li ul {
+    padding: 0;
+    background: var(--lightBackgroundColor);
+}
+
+/* -------------------------- Close Button */
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 34px;
+    font-size: 27px;
+    cursor: pointer;
+    color: var(--lightTextColor);
+    padding: 0;
+}
+
+.overlay .closebtn:hover {
+    color: var(--tintColor);
+}
+
+/* -------------------------- Overlay Opening from Nav */
+
+.sky-launcher {
+    position: fixed;
+    top: 5px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 8;
+    transition: 0.3s;
+    color: var(--tintColor);
+    font-size: 28px;
+}
+
+.sky-launcher:hover {
+    color: var(--accentColor);
+}
+
+.space_rocket {
+    width: 33px;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: 0.3s;
+}
+
+.space_rocket:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+}
+
+.space_rocket:active, .space_rocket:focus {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+}
+
+/* -------------------------- Top and Bottom Bar Content Area */
+
+.highBar {
+    position: relative;
+    top: 50px;
+    width: 93%;
+    color: var(--lightTextColor);
+    padding: 0;
+    text-align: left;
+}
+
+.lowBar {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    width: 90%;
+    background: var(--lightBackgroundColor);
+    color: var(--lightTextColor);
+    padding: 0;
+    border-radius: 7px;
+}
+
+/* -------------------------- Screen Adaptation */
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 18px}
+    .overlay .closebtn {
+        font-size: 27px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .overlay {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .sky-launcher {
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .space_rocket {
+        width: 40px;
+    }
+}

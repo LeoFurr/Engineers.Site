@@ -1,0 +1,11 @@
+prototype(Engineers.Site:Button) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Engineers.Site/Private/Templates/NodeTypes/Button.html'
+
+    title = ${q(node).property('title')}
+    design = ${q(node).property('design')}
+    color = ${q(node).property('color')}
+    url = ${q(node).property('url')}
+    url.@process.convertUris = Neos.Neos:ConvertUris
+    target = ${q(node).property('target')}
+    disable = ${q(node).property('disable')}
+}

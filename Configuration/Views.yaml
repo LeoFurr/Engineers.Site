@@ -1,0 +1,4 @@
+-
+  requestFilter: 'isPackage("Flowpack.Neos.FrontendLogin") && isController("Authentication") && isAction("index")'
+  options:
+    templatePathAndFilename: 'resource://Engineers.Site/Private/Templates/Authenticate/Index.html'

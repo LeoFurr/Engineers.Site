@@ -1,0 +1,46 @@
+# Custom pages operating in the document.
+
+# Hide standard Neos Page
+'Neos.NodeTypes:Page':
+  abstract: TRUE
+
+# HomePage
+# Defines header and footer.
+##############################
+'Engineers.Site:HomePage':
+  constraints:
+    nodeTypes:
+      'Engineers.Site:HomePage': false
+  superTypes:
+    'Neos.NodeTypes:Page': TRUE
+  ui:
+    icon: 'icon-home'
+    label: 'Engineers Homepage'
+    position: 2
+    inspector:
+      groups:
+        branding:
+          label: 'Branding'
+          icon: 'icon-home'
+          position: 2
+  childNodes:
+    header:
+      type: 'Neos.Neos:ContentCollection'
+    footer:
+      type: 'Neos.Neos:ContentCollection'
+
+# Standard page
+##############################
+'Engineers.Site:Page':
+  constraints:
+    nodeTypes:
+      'Engineers.Site:HomePage': false
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    icon: 'icon-file'
+    label: 'Engineers Page'
+    position: 1
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'

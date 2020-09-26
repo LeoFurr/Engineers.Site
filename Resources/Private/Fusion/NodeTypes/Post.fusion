@@ -1,0 +1,5 @@
+// Fusion defining additional conent areas of Post NodeType.
+
+prototype(Engineers.Site:Post) < prototype(Engineers.Site:Page) {
+
+}

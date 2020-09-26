@@ -1,0 +1,8 @@
+prototype(Engineers.Site:ColoredText) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Engineers.Site/Private/Templates/NodeTypes/ColoredText.html'
+    columnContent = Neos.Neos:ContentCollection
+    columnContent {
+        nodePath = 'column0'
+    }
+    color = ${q(node).property('color')}
+}

@@ -1,0 +1,6 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<a href="{url}" {f:if(condition:target,then:'target="_blank"')}>
+    <button class="{design} {color} {f:if(condition:disable,then:'disabled')}" >
+        {neos:contentElement.editable(property: 'title')}
+    </button>
+</a>
